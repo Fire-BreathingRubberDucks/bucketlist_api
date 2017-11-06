@@ -9,7 +9,8 @@ const experienceSchema = new mongoose.Schema({
   },
   eventType: {
     type: String,
-    required: true
+    required: true,
+    enum: ['Movie', 'Book', 'Show', 'Concert', 'Sporting Event', 'Sight-Seeing', 'Relaxation', 'Outdoors', 'Goal', 'Other']
   },
   timeRequired: {
     type: String
