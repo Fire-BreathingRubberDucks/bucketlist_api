@@ -9,11 +9,13 @@ const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
 
 const index = (req, res, next) => {
-  Experience.find()
+  const owner = { _owner: req.user.id }
+  Experience.find(owner)
     .then(experiences => res.json({
       experiences: experiences.map((e) =>
         e.toJSON({ virtuals: true, user: req.user }))
     }))
+    .then(console.log('request user is ', req.user.id))
     .catch(next)
 }
 
@@ -57,8 +59,8 @@ module.exports = controller({
   update,
   destroy
 }, { before: [
-  { method: setUser, only: ['index', 'show'] },
-  { method: authenticate, except: ['index', 'show'] },
+  { method: setUser, only: ['show'] },
+  { method: authenticate, except: ['show'] },
   { method: setModel(Experience), only: ['show'] },
   { method: setModel(Experience, { forUser: true }), only: ['update', 'destroy'] }
 ] })
