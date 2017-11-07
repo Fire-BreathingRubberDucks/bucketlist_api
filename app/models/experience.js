@@ -9,7 +9,8 @@ const experienceSchema = new mongoose.Schema({
   },
   eventType: {
     type: String,
-    required: true
+    required: true,
+    enum: ['Movie', 'Book', 'Show', 'Concert', 'Sporting Event', 'Sight-Seeing', 'Relaxation', 'Outdoors', 'Goal', 'Other']
   },
   timeRequired: {
     type: String
@@ -27,12 +28,12 @@ const experienceSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
     default: false
+  },
+  _owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
   }
-  // _owner: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'User',
-  //   required: true
-  // }
 }, {
   timestamps: true
 })
