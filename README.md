@@ -19,6 +19,7 @@ Users can view, add, edit, and delete their experiences, which is completed usin
 Users have a one-to-many relationship with experiences.
 
 Authentication
+
 HTTP Verb | URL                   | Controller#Action
 --------- | --------------------- | -----------------
 POST      | /sign-up              | users#signup
@@ -27,6 +28,7 @@ PATCH     | /change-password/:id  | users#changepw
 DELETE    | /sign-out/:id         | users#signout
 
 Experiences
+
 HTTP Verb | URL               | Controller#Action
 --------- | ----------------- | -----------------
 GET       | /experiences      | experiences#index
