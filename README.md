@@ -19,21 +19,21 @@ Users can view, add, edit, and delete their experiences, which is completed usin
 Users have a one-to-many relationship with experiences.
 
 Authentication
-HTTP Verb | URL | Controller#Action
---- | --- | ---
-POST  | /sign-up  | users#signup
-POST  | /sign-in  | users#signin
-PATCH  | /change-password/:id  | users#changepw
-DELETE  | /sign-out/:id  | users#signout
+HTTP Verb | URL                   | Controller#Action
+--------- | --------------------- | -----------------
+POST      | /sign-up              | users#signup
+POST      | /sign-in              | users#signin
+PATCH     | /change-password/:id  | users#changepw
+DELETE    | /sign-out/:id         | users#signout
 
 Experiences
-HTTP Verb | URL | Controller#Action
---- | --- | ---
-GET  | /experiences  | experiences#index
-GET  | /experiences/:id  | experiences#show
-POST  | /experiences  | experiences#create
-PATCH  | /experiences/:id  | experiences#update
-DELETE  | /experiences/:id  | experiences#destroy
+HTTP Verb | URL               | Controller#Action
+--------- | ----------------- | -----------------
+GET       | /experiences      | experiences#index
+GET       | /experiences/:id  | experiences#show
+POST      | /experiences      | experiences#create
+PATCH     | /experiences/:id  | experiences#update
+DELETE    | /experiences/:id  | experiences#destroy
 
 ## Technologies Used
 * express
