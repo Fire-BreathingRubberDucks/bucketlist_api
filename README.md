@@ -45,6 +45,9 @@ DELETE    | /experiences/:id  | experiences#destroy
 * javascript
 
 ## Unsolved Issues
+* Link to launch 3rd party sites, based on event type Link to
+* 3rd party api to bring in new info. 
+* Improve layout for responsiveness
 
 ## Planning/Process/Problem-Solving
 As a group, we made an initial plan together about the high-level tasks to be completed and in what rough order. We used trello to create these tasks and keep them organized on a board. As we found bugs or enhancements or broke our tasks into more detailed pieces, we added them to the board.
