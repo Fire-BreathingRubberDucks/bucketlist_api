@@ -36,11 +36,10 @@ PATCH  | /experiences/:id  | experiences#update
 DELETE  | /experiences/:id  | experiences#destroy
 
 ## Technologies Used
-* node
 * express
 * mongoose
 * heroku
-* mongo
+* mongoDB
 * javascript
 
 ## Unsolved Issues
