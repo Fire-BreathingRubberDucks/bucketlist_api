@@ -15,7 +15,6 @@ const index = (req, res, next) => {
       experiences: experiences.map((e) =>
         e.toJSON({ virtuals: true, user: req.user }))
     }))
-    .then(console.log('request user is ', req.user.id))
     .catch(next)
 }
 
