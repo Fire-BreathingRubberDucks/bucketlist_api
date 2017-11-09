@@ -45,8 +45,7 @@ DELETE    | /experiences/:id  | experiences#destroy
 * javascript
 
 ## Unsolved Issues
-* Link to launch 3rd party sites, based on event type Link to
-* 3rd party api to bring in new info. 
+* Link to 3rd party api to bring in new info
 * Improve layout for responsiveness
 
 ## Planning/Process/Problem-Solving
